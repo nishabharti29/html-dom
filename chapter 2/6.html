@@ -1,0 +1,22 @@
+<p class="para">One</p>
+<p class="para">Two</p>
+<p class="para">Three</p>
+<script>
+  const parasNodeList = document.querySelectorAll(".para");
+  parasNodeList.forEach((paragraph, index) => {
+    console.log(`NodeList Item ${index}:`, paragraph.textContent);
+  });
+  const parasHTMLCollection = document.getElementsByClassName("para");
+  Array.from(parasHTMLCollection).forEach((paragraph, index) => {
+    console.log(
+      `HTMLCollection (via Array.from) Item ${index}:`,
+      paragraph.textContent
+    );
+  });
+  for (let i = 0; i < parasHTMLCollection.length; i++) {
+    console.log(
+      `HTMLCollection (for loop) Item ${i}:`,
+      parasHTMLCollection[i].textContent
+    );
+  }
+</script>
