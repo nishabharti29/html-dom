@@ -1,0 +1,17 @@
+<a id="myLink" href="initial-page.html" target="_blank">Click Me</a>
+<img id="myImage" src="old-image.png" alt="An image" />
+<input id="myInput" type="text" value="Default Text" disabled />
+<script>
+  const link = document.getElementById("myLink");
+  const img = document.getElementById("myImage");
+  const input = document.getElementById("myInput");
+  console.log(link.href);
+  console.log(img.src);
+  console.log(input.value);
+  console.log(input.disabled);
+  console.log(link.id);
+  link.href = "new-page.html";
+  img.alt = "A new description";
+  input.value = "User typed this";
+  input.disabled = false;
+</script>

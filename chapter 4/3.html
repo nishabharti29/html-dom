@@ -1,0 +1,13 @@
+<div id="example">
+  Hello <span style="display: none">Secret</span> World!
+  <style>
+    #example {
+      text-transform: uppercase;
+    }
+  </style>
+</div>
+<script>
+  const exDiv = document.getElementById("example");
+  console.log(exDiv.textContent);
+  console.log(exDiv.innerText);
+</script>

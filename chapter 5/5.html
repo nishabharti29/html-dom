@@ -1,0 +1,25 @@
+<div
+  id="product"
+  data-product-id="12345"
+  data-stock-level="15"
+  data-item-category="electronics"
+>
+  ...
+</div>
+<script>
+  const product = document.getElementById("product");
+
+  console.log(product.dataset.productId);
+  console.log(product.dataset.stockLevel);
+  console.log(product.dataset.itemCategory);
+
+  product.dataset.stockLevel = "10";
+  console.log(product.getAttribute("data-stock-level"));
+
+  product.dataset.orderStatus = "processing";
+  console.log(product.hasAttribute("data-order-status"));
+  console.log(product.getAttribute("data-order-status"));
+
+  delete product.dataset.itemCategory;
+  console.log(product.hasAttribute("data-item-category"));
+</script>

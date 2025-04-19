@@ -1,0 +1,12 @@
+<ul id="list">
+  <li id="item-to-remove">Remove Me</li>
+  <li>Keep Me</li>
+</ul>
+<script>
+  const list = document.getElementById("list");
+  const itemToRemove = document.getElementById("item-to-remove");
+  if (list && itemToRemove) {
+    const removedItem = list.removeChild(itemToRemove);
+    console.log("Removed:", removedItem);
+  }
+</script>

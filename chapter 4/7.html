@@ -1,0 +1,14 @@
+<ul id="original-list">
+  <li>Item 1</li>
+  <li>Item 2</li>
+</ul>
+<div id="clone-container"></div>
+<script>
+  const originalList = document.getElementById("original-list");
+  const cloneContainer = document.getElementById("clone-container");
+  const shallowClone = originalList.cloneNode(false);
+  shallowClone.id = "shallow-clone-list";
+  const deepClone = originalList.cloneNode(true);
+  deepClone.id = "deep-clone-list";
+  cloneContainer.appendChild(deepClone);
+</script>

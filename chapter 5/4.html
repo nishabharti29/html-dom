@@ -1,0 +1,25 @@
+<div id="tester" class="info active">...</div>
+<script>
+  const tester = document.getElementById("tester");
+
+  console.log(tester.classList.contains("info"));
+  console.log(tester.classList.contains("warning"));
+
+  tester.classList.add("hidden", "extra");
+  console.log(tester.className);
+
+  tester.classList.remove("active");
+  console.log(tester.className);
+
+  tester.classList.toggle("info");
+  console.log(tester.classList.contains("info"));
+
+  tester.classList.toggle("warning");
+  console.log(tester.classList.contains("warning"));
+
+  tester.classList.toggle("hidden", false);
+  console.log(tester.classList.contains("hidden"));
+
+  tester.classList.replace("warning", "error");
+  console.log(tester.className);
+</script>

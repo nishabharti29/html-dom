@@ -1,0 +1,15 @@
+<div class="container section">
+  <article id="content">
+    <p>Some text <strong id="startNode">here</strong>.</p>
+  </article>
+</div>
+<script>
+  const startNode = document.getElementById("startNode");
+  const containingArticle = startNode.closest("article");
+  const containingSection = startNode.closest(".section");
+  const nonExistent = startNode.closest("ul");
+
+  console.log(containingArticle.id);
+  console.log(containingSection.className);
+  console.log(nonExistent);
+</script>

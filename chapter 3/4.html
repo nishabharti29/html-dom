@@ -1,0 +1,14 @@
+<div id="container">
+  <p>First paragraph.</p>
+  <!-- Comment -->
+  <span id="middle">Middle span.</span> <em>Emphasis</em>
+</div>
+<script>
+  const middleSpan = document.getElementById("middle");
+  console.log(middleSpan.previousSibling);
+  console.log(middleSpan.nextSibling);
+  const prevElem = middleSpan.previousElementSibling;
+  const nextElem = middleSpan.nextElementSibling;
+  console.log(prevElem.tagName);
+  console.log(nextElem.tagName);
+</script>

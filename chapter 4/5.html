@@ -1,0 +1,10 @@
+<div id="parent">
+  <p id="second">Second paragraph.</p>
+</div>
+<script>
+  const parent = document.getElementById("parent");
+  const secondPara = document.getElementById("second");
+  const firstPara = document.createElement("p");
+  firstPara.textContent = "First paragraph.";
+  parent.insertBefore(firstPara, secondPara);
+</script>

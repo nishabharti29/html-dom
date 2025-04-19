@@ -1,0 +1,7 @@
+<div id="container">Old content.</div>
+<script>
+  const container = document.getElementById("container");
+  console.log(container.innerHTML);
+  const userProvidedData = "<em>Emphasized!</em>";
+  container.innerHTML = `<h2>New Title</h2><p>${userProvidedData}</p>`;
+</script>
