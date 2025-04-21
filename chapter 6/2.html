@@ -1,0 +1,22 @@
+<style>
+  .styled-div {
+    width: 150px;
+    padding: 10px;
+    color: green;
+    font-weight: bold; /* Not set inline */
+  }
+</style>
+<div id="myDiv" class="styled-div" style="padding: 5px; color: red">A div</div>
+
+<script>
+  const div = document.getElementById("myDiv");
+  console.log("Inline padding:", div.style.padding);
+  console.log("Inline color:", div.style.color);
+  console.log("Inline font-weight:", div.style.fontWeight);
+  const computedStyles = window.getComputedStyle(div);
+  console.log("Computed padding:", computedStyles.padding);
+  console.log("Computed color:", computedStyles.color);
+  console.log("Computed width:", computedStyles.width);
+  console.log("Computed font-weight:", computedStyles.fontWeight);
+  console.log("Computed display:", computedStyles.display);
+</script>

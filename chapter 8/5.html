@@ -1,0 +1,20 @@
+<select id="countrySelect" name="country">
+  <option value="">--Please choose an option--</option>
+  <option value="US">United States</option>
+  <option value="CA">Canada</option>
+  <option value="MX" selected>Mexico</option>
+</select>
+<script>
+  const countrySelect = document.getElementById("countrySelect");
+  console.log("Selected value:", countrySelect.value);
+  console.log("Selected index:", countrySelect.selectedIndex);
+  console.log(
+    "Selected text:",
+    countrySelect.options[countrySelect.selectedIndex].text
+  );
+  countrySelect.value = "CA";
+  console.log("New selected value:", countrySelect.value);
+  console.log("New selected index:", countrySelect.selectedIndex);
+  countrySelect.selectedIndex = 1;
+  console.log("Selected value by index:", countrySelect.value);
+</script>

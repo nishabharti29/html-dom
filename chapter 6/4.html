@@ -1,0 +1,21 @@
+<p id="status">Normal status.</p>
+<button id="toggleHighlight">Toggle Highlight</button>
+<button id="showError">Show Error</button>
+<button id="hideStatus">Hide</button>
+
+<script>
+  const statusPara = document.getElementById("status");
+  const btnHighlight = document.getElementById("toggleHighlight");
+  const btnError = document.getElementById("showError");
+  const btnHide = document.getElementById("hideStatus");
+  btnHighlight.addEventListener("click", () => {
+    statusPara.classList.toggle("highlight");
+  });
+  btnError.addEventListener("click", () => {
+    statusPara.textContent = "An error occurred!";
+    statusPara.className = "error-message";
+  });
+  btnHide.addEventListener("click", () => {
+    statusPara.classList.add("hidden");
+  });
+</script>

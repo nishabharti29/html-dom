@@ -1,0 +1,9 @@
+<input type="checkbox" id="agree" name="terms" value="agreed" /> I agree to the
+terms.
+<script>
+  const agreeCheckbox = document.getElementById("agree");
+  console.log("Is checked?", agreeCheckbox.checked);
+  console.log("Checkbox value:", agreeCheckbox.value);
+  agreeCheckbox.checked = true;
+  console.log("Is checked now?", agreeCheckbox.checked);
+</script>

@@ -1,0 +1,14 @@
+<div id="outer" style="padding: 20px; background: lightblue">
+  <button id="inner">Click Me</button>
+</div>
+<script>
+  const outer = document.getElementById("outer");
+  const inner = document.getElementById("inner");
+  outer.addEventListener("click", () => {
+    console.log("Outer div clicked (Bubbling)");
+  });
+  inner.addEventListener("click", (event) => {
+    console.log("Inner button clicked");
+    event.stopPropagation();
+  });
+</script>

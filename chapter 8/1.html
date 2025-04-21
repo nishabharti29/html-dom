@@ -1,0 +1,13 @@
+<form id="dataForm">
+  <input type="text" name="username" id="user" />
+  <input type="password" name="password" />
+  <button type="submit">Go</button>
+</form>
+<script>
+  const myForm = document.getElementById("dataForm");
+  console.log(myForm.elements);
+  const usernameInput = myForm.elements.username;
+  const passwordInput = myForm.elements["password"];
+  const userInputById = myForm.elements.user;
+  console.log(usernameInput.type);
+</script>

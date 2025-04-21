@@ -1,0 +1,27 @@
+<ul id="itemList">
+  <li data-id="1">Item 1 <button class="deleteBtn">X</button></li>
+  <li data-id="2">Item 2 <button class="deleteBtn">X</button></li>
+  <li data-id="3">Item 3 <button class="deleteBtn">X</button></li>
+  <!-- More items might be added dynamically -->
+</ul>
+
+<script>
+  const itemList = document.getElementById("itemList");
+
+  itemList.addEventListener("click", (event) => {
+    console.log("Clicked inside the list!");
+    console.log("Target:", event.target);
+    console.log("Current Target:", event.currentTarget);
+
+    if (event.target.classList.contains("deleteBtn")) {
+      console.log("Delete button clicked!");
+      const listItem = event.target.closest("li");
+      if (listItem) {
+        console.log("Removing item with ID:", listItem.dataset.id);
+        listItem.remove();
+      }
+    } else if (event.target.tagName === "LI") {
+      console.log("List item text clicked:", event.target.textContent);
+    }
+  });
+</script>

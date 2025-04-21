@@ -1,0 +1,14 @@
+<p id="myPara">This is a paragraph.</p>
+<button id="styleButton">Change Style</button>
+<script>
+  const para = document.getElementById("myPara");
+  const btn = document.getElementById("styleButton");
+  console.log("Initial inline color:", para.style.color);
+  btn.addEventListener("click", () => {
+    para.style.color = "blue";
+    para.style.backgroundColor = "#eee";
+    para.style.fontSize = "20px";
+    para.style.padding = "15px";
+    para.style.border = "1px solid black";
+  });
+</script>

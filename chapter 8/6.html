@@ -1,0 +1,25 @@
+<select id="fruitSelect" name="fruits" multiple size="3">
+  <option value="apple">Apple</option>
+  <option value="banana" selected>Banana</option>
+  <option value="orange" selected>Orange</option>
+  <option value="grape">Grape</option>
+</select>
+<script>
+  const fruitSelect = document.getElementById("fruitSelect");
+  const selectedFruits = [];
+
+  for (const option of fruitSelect.options) {
+    if (option.selected) {
+      selectedFruits.push(option.value);
+    }
+  }
+  console.log("Selected fruits:", selectedFruits);
+  for (const option of fruitSelect.options) {
+    option.selected = option.value === "apple" || option.value === "grape";
+  }
+
+  const newSelectedFruits = Array.from(fruitSelect.options)
+    .filter((option) => option.selected)
+    .map((option) => option.value);
+  console.log("Newly selected fruits:", newSelectedFruits);
+</script>

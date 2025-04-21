@@ -1,0 +1,26 @@
+<form id="choiceForm">
+  Choose color:
+  <input type="radio" name="color" value="red" /> Red
+  <input type="radio" name="color" value="green" checked /> Green
+  <input type="radio" name="color" value="blue" /> Blue
+</form>
+<script>
+  const form = document.getElementById("choiceForm");
+  const colorRadios = form.elements.color;
+
+  let selectedColorValue = "";
+  for (const radio of colorRadios) {
+    if (radio.checked) {
+      selectedColorValue = radio.value;
+      break;
+    }
+  }
+  console.log("Selected Color (Loop):", selectedColorValue);
+  console.log("Selected Color (Direct):", colorRadios.value);
+  const checkedRadio = form.querySelector('input[name="color"]:checked');
+  if (checkedRadio) {
+    console.log("Selected Color (QS):", checkedRadio.value);
+  }
+  colorRadios[2].checked = true;
+  console.log("New Selected Color (Direct):", colorRadios.value);
+</script>

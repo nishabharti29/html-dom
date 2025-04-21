@@ -1,0 +1,16 @@
+<ul id="myList"></ul>
+<script>
+  const list = document.getElementById("myList");
+  const data = ["Apple", "Banana", "Cherry", "Date", "Elderberry"];
+
+  const fragment = document.createDocumentFragment(); // Create fragment
+
+  data.forEach((itemText) => {
+    const li = document.createElement("li");
+    li.textContent = itemText;
+    fragment.appendChild(li); // Append LI to the fragment (off-DOM)
+  });
+
+  // Now, append the entire fragment (with all LIs) to the live list
+  list.appendChild(fragment); // Only one append to the live DOM
+</script>

@@ -1,0 +1,13 @@
+<form id="loginForm">
+  Email: <input type="email" name="email" value="test@example.com" /><br />
+  Comments: <textarea name="comments"></textarea>
+</form>
+<script>
+  const form = document.getElementById("loginForm");
+  const emailInput = form.elements.email;
+  const commentsArea = form.elements.comments;
+  console.log("Email:", emailInput.value);
+  console.log("Comments:", commentsArea.value);
+  emailInput.value = "new@example.com";
+  commentsArea.value = "Some initial comment text.";
+</script>
